@@ -1,35 +1,40 @@
-﻿html, body {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+﻿@font-face {
+    font-family: 'Computer Modern';
+    src: url('computer-modern/cmunbmr.ttf');
 }
 
-h1:focus {
-    outline: none;
+:root {
+    font-family: 'Computer Modern', serif;
+    /* CSS HEX */
+    --tea-green: #c5ebc3ff;
+    --cambridge-blue: #b7c8b5ff;
+    --lilac-luster: #a790a5ff;
+    --antique-fuchsia: #875c74ff;
+    --eggplant: #54414eff;
+
+    /* CSS HSL */
+    --tea-green: hsla(117, 50%, 84%, 1);
+    --cambridge-blue: hsla(114, 15%, 75%, 1);
+    --lilac-luster: hsla(305, 12%, 61%, 1);
+    --antique-fuchsia: hsla(327, 19%, 45%, 1);
+    --eggplant: hsla(319, 13%, 29%, 1);
 }
 
-a, .btn-link {
-    color: #0071c1;
+@media (prefers-color-scheme: dark) {
+    :root {
+        background-color: var(--cambridge-blue);
+    }
 }
 
-.btn-primary {
-    color: #fff;
-    background-color: #1b6ec2;
-    border-color: #1861ac;
+@media not all and (prefers-color-scheme: dark) {
+    :root {
+        background-color: var(--tea-green);
+    }
 }
 
-.content {
-    padding-top: 1.1rem;
-}
-
-.valid.modified:not([type=checkbox]) {
-    outline: 1px solid #26b050;
-}
-
-.invalid {
-    outline: 1px solid red;
-}
-
-.validation-message {
-    color: red;
+.heading {
+    text-align: center;
+    font-size: 500%;
 }
 
 #blazor-error-ui {
