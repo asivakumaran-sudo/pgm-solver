@@ -1,2 +1,2 @@
 # pgm-solver
-Envisioned as a client-server app to solve probabilistic graphical models
+Envisioned as a GUI used to solve probabilistic graphical models
