@@ -32,6 +32,14 @@
     }
 }
 
+.graph-element {
+    cursor: pointer;
+    height: 100px;
+    width: 100px;
+    display: inline-block;
+    position: absolute;
+}
+
 .heading {
     text-align: center;
     font-size: 500%;

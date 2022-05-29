@@ -4,4 +4,28 @@
 
 <h1 class="heading">Probablistic Graphical Model Evaluator</h1>
 
+<div style="left: @($"{x}px"); top: @($"{y}px")" class="graph-element" draggable="true" @ondrag="GetPointerLocation" @ondragend="DropElement">
+    <svg>
+        <circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="red" />
+    </svg>    
+</div>
+
+
+@code
+{
+    private double x = 50;
+
+    private double y = 50;
+    
+    private void GetPointerLocation(DragEventArgs dragEvent)
+    {
+        Console.WriteLine($"x: {dragEvent.ClientX}, y: {dragEvent.ClientY}");
+    }
+
+    private void DropElement(DragEventArgs dragEvent)
+    {
+        this.x = dragEvent.ClientX;
+        this.y = dragEvent.ClientY;
+    }
+}
 

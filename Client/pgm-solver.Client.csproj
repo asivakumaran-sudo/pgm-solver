@@ -16,4 +16,8 @@
     <ProjectReference Include="..\Shared\pgm-solver.Shared.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Components" />
+  </ItemGroup>
+
 </Project>
